@@ -11,10 +11,13 @@ import time
 from typing import List, Optional, Dict, Any
 
 import httpx
-from loguru import logger
 
 from backend.app.config import get_settings
 from backend.app.models.schemas import POIInfo, WeatherInfo, Location, RouteInfo
+from backend.app.utils.logger import get_logger
+
+
+logger = get_logger(__name__)
 
 
 class AmapServiceError(Exception):
